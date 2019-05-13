@@ -30,17 +30,14 @@ s.on('message', function (msg, source) {
 
     var tmpMus = JSON.parse(msg);
 
-    if (!musiciens.has(tmpMus.uuid)) {
-        var musicien = new Object();
-        musicien.uuid = tmpMus.uuid;
-        musicien.instrument = sons.get(tmpMus.sound);
-        musicien.activeSince = moment();
-        musicien.active = true;
+	var musicien = new Object();
+	musicien.uuid = tmpMus.uuid;
+	musicien.instrument = sons.get(tmpMus.sound);
+	musicien.activeSince = moment();
+	musicien.active = true;
 
-        musiciens.set(musicien.uuid, musicien);
-    } else {
-        musiciens.get(tmpMus.uuid).active = true;
-    }
+	musiciens.set(musicien.uuid, musicien);
+
 });
 
 //interval d'écoute ~3sec
