@@ -165,19 +165,11 @@ When you connect to the TCP interface of the **Auditor**, you should receive an 
 |Question | How can we use the `Map` built-in object introduced in ECMAScript 6 to implement a **dictionary**?  |
 | | en définissant les ID et la valeur associé (un peu comme un switch) |
 |Question | How can we use the `Moment.js` npm module to help us with **date manipulations** and formatting?  |
-| | var moment = require('moment');
-moment().format(); |
+| | var moment = require('moment'); moment().format(); |
 |Question | When and how do we **get rid of inactive players**?  |
 | | Quand ils ne répondent plus |
 |Question | How do I implement a **simple TCP server** in Node.js?  |
-| | var net = require('net');
-
-var server = net.createServer(function(socket) {
-	socket.write('Echo server\r\n');
-	socket.pipe(socket);
-});
-
-server.listen(1337, '127.0.0.1'); ici le port sera 2205 |
+| | var net = require('net');</br> var server = net.createServer(function(socket) {socket.write('Echo server\r\n'); socket.pipe(socket)});</br> server.listen(1337, '127.0.0.1'); ici le port sera 2205 |
 
 
 ## Task 5: package the "auditor" app in a Docker image
